@@ -78,6 +78,8 @@ Speed or accuracy improvement
 👉 Questions are dynamically selected from the question bank.
 
 📁 Project Structure
+
+
 edtech_recommender/
 ├── backend/
 │   ├── main.py
@@ -101,6 +103,8 @@ edtech_recommender/
 ├── Dockerfile.frontend
 ├── requirements.txt
 └── README.md
+
+
 🚀 Deployment
 🌐 Live Application
 
