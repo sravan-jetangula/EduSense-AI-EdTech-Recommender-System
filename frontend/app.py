@@ -1,8 +1,6 @@
 """
-app.py  -  Streamlit Frontend for EdTech AI Recommender
+app.py  -   for EdTech AI Recommender
 =========================================================
-Run with:
-    streamlit run frontend/app.py
 
 Improvements over original:
   - Added cohort delta display in Study Plan (how student compares to class)
