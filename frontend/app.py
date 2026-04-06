@@ -1,40 +1,28 @@
-
-
-import streamlit as st
-import requests
-import os
-
-# ✅ GLOBAL API BASE (FIXED)
-API_BASE = os.getenv(
-    "API_BASE_URL",
-    "https://edusense-ai-edtech-recommender-system-1.onrender.com"
-)
-
 """
 app.py  -  Streamlit Frontend for EdTech AI Recommender
 =========================================================
 Run with:
     streamlit run frontend/app.py
 
-Improvements over original:
-  - Added cohort delta display in Study Plan (how student compares to class)
-  - Score trend sparkline improved: shows session dates when available
-  - Subject breakdown bar chart rendered inline — cleaner layout
-  - Study Plan: dost_icon shown alongside step label
-  - Leaderboard: added rank delta indicator and completion rate column
-  - Question Viewer: error message is more descriptive
-  - All API calls use a shared _api() helper with consistent error handling
-  - Sidebar stats (total questions, DOST types) added
-  - Minor: font import, spacing, label clarity throughout
+Deployment:
+    Set environment variable API_BASE_URL to your backend URL.
+    e.g. https://your-backend.onrender.com
 """
 
+import os
 import streamlit as st
 import requests
 
-API_BASE = "http://localhost:8000"
+# ---------------------------------------------------------------------------
+# API BASE — reads from environment variable for Render deployment
+# ---------------------------------------------------------------------------
+API_BASE = os.getenv(
+    "API_BASE_URL",
+    "https://edusense-ai-edtech-recommender-system-1.onrender.com"
+)
 
 # ---------------------------------------------------------------------------
-# Page config
+# Page config — MUST be the first Streamlit call
 # ---------------------------------------------------------------------------
 st.set_page_config(
     page_title="EduSense AI",
@@ -129,14 +117,18 @@ def _api(method: str, path: str):
     """Shared API caller. Returns JSON or None on error."""
     try:
         fn = requests.get if method == "GET" else requests.post
-        r = fn(f"{API_BASE}{path}", timeout=10)
+        r = fn(f"{API_BASE}{path}", timeout=15)
         r.raise_for_status()
         return r.json()
     except requests.exceptions.ConnectionError:
         st.error(
-            f"❌ Cannot connect to API at {API_BASE}. "
-            "Make sure the backend is running: `uvicorn backend.main:app --reload`"
+            f"❌ Cannot connect to API at `{API_BASE}`. "
+            "Check that the backend service is running on Render and the "
+            "`API_BASE_URL` environment variable is set correctly."
         )
+        return None
+    except requests.exceptions.Timeout:
+        st.warning("⏳ Request timed out. The backend may be waking up — please try again.")
         return None
     except Exception as e:
         st.error(f"API error ({path}): {e}")
@@ -241,6 +233,7 @@ page = st.sidebar.radio(
 students = api_get("/students") or []
 student_options = {s["name"]: s["student_id"] for s in students}
 
+selected_name, selected_sid = "", ""
 if page in ("📊 Analysis", "🗺️ Study Plan", "❓ Question Viewer"):
     if student_options:
         selected_name = st.sidebar.selectbox(
@@ -250,10 +243,10 @@ if page in ("📊 Analysis", "🗺️ Study Plan", "❓ Question Viewer"):
         )
         selected_sid = student_options.get(selected_name, "")
     else:
-        st.sidebar.warning("No students loaded.")
-        selected_name, selected_sid = "", ""
+        st.sidebar.warning("No students loaded — check API connection.")
 
 st.sidebar.markdown("---")
+st.sidebar.caption(f"API: `{API_BASE}`")
 st.sidebar.caption("Powered by FastAPI + Streamlit  |  v1.1")
 
 
@@ -298,7 +291,7 @@ if page == "🏠 Home":
         lb = api_get("/leaderboard") or []
         top = lb[0] if lb else {}
         st.markdown(
-            f"<div class='metric-card'><div class='metric-value'>{top.get('avg_score',0):.0f}%</div>"
+            f"<div class='metric-card'><div class='metric-value'>{top.get('avg_score', 0):.0f}%</div>"
             f"<div class='metric-label'>Top Student Score</div></div>",
             unsafe_allow_html=True,
         )
@@ -340,7 +333,6 @@ elif page == "📊 Analysis":
     if not data:
         st.stop()
 
-    # Row 1 — headline metrics
     col1, col2, col3, col4 = st.columns(4)
     metrics = [
         ("Overall Score", f"{data['overall_score']:.1f}%", "Average across all sessions"),
@@ -443,23 +435,21 @@ elif page == "🗺️ Study Plan":
 
     ps = data.get("profile_summary", {})
 
-    # Profile summary row
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.metric("Overall Score", f"{ps.get('overall_score', 0):.1f}%")
     with col2:
-        st.metric("Trend", f"{trend_emoji(ps.get('trend',''))} {ps.get('trend','').title()}")
+        st.metric("Trend", f"{trend_emoji(ps.get('trend', ''))} {ps.get('trend', '').title()}")
     with col3:
         st.metric("Speed", ps.get("speed", "N/A").title())
     with col4:
-        st.metric("Sessions Completed", f"{ps.get('completion_rate',0)*100:.0f}%")
+        st.metric("Sessions Completed", f"{ps.get('completion_rate', 0)*100:.0f}%")
 
-    # Cohort comparison line
     delta = ps.get("cohort_delta", 0)
     cohort_avg = ps.get("cohort_avg", 0)
     st.markdown(
-        f"**{ps.get('weak_count',0)} topics need work** · "
-        f"**{ps.get('strong_count',0)} strong topics** · "
+        f"**{ps.get('weak_count', 0)} topics need work** · "
+        f"**{ps.get('strong_count', 0)} strong topics** · "
         f"Cohort avg: {cohort_avg:.1f}% · {delta_html(delta)}",
         unsafe_allow_html=True,
     )
@@ -528,7 +518,6 @@ elif page == "❓ Question Viewer":
                 }
                 type_label = type_labels.get(q.get("type", ""), q.get("type", "Unknown"))
 
-                # Meta row
                 col_meta1, col_meta2 = st.columns(2)
                 with col_meta1:
                     st.markdown(
@@ -583,10 +572,10 @@ elif page == "🏆 Leaderboard":
         st.info("No leaderboard data available.")
         st.stop()
 
-    rank_emoji = {1: "🥇", 2: "🥈", 3: "🥉"}
+    rank_emoji_map = {1: "🥇", 2: "🥈", 3: "🥉"}
     for entry in lb:
         rank = entry["rank"]
-        emoji = rank_emoji.get(rank, f"#{rank}")
+        emoji = rank_emoji_map.get(rank, f"#{rank}")
         trend_e = trend_emoji(entry.get("trend", "stable"))
         rank_class = {1: "rank-gold", 2: "rank-silver", 3: "rank-bronze"}.get(rank, "rank-other")
         completion_pct = f"{entry.get('completion_rate', 0)*100:.0f}%"
@@ -617,4 +606,3 @@ elif page == "🏆 Leaderboard":
         "Composite Scores",
     )
     st.markdown(chart_html, unsafe_allow_html=True)
-
