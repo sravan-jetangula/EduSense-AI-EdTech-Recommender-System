@@ -1,0 +1,23 @@
+# EdTech AI Recommender – Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# API framework
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+
+# Frontend
+streamlit==1.33.0
+
+# Data & numerics
+pandas==2.2.1
+numpy==1.26.4
+
+# HTML parsing (for strip_html)
+beautifulsoup4==4.12.3
+
+# HTTP client (used in Streamlit)
+requests==2.31.0
+
+# Utilities
+python-multipart==0.0.9
+pydantic==2.7.0

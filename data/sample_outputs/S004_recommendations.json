@@ -1,0 +1,74 @@
+{
+  "student_id": "S004",
+  "name": "Sneha Reddy",
+  "profile_summary": {
+    "overall_score": 78.99,
+    "trend": "stable",
+    "completion_rate": 1.0,
+    "skip_rate": 0.071,
+    "speed": "moderate",
+    "weak_count": 0,
+    "strong_count": 5
+  },
+  "steps": [
+    {
+      "step": 2,
+      "dost_type": "formula",
+      "dost_name": "Formula Sheet",
+      "subject": "Chemistry",
+      "chapter": "Multiple Chapters",
+      "difficulty": "easy",
+      "duration_min": 15,
+      "question_count": 10,
+      "question_ids": [
+        "Q011",
+        "Q012",
+        "Q013",
+        "Q014"
+      ],
+      "reasoning": "Chemistry average is 72.7%. Formulae revision improves recall and accuracy.",
+      "message": "Quick formula blast for Chemistry! Revise key formulas \u2014 aim for 100% recall. \ud83d\udd22"
+    },
+    {
+      "step": 4,
+      "dost_type": "practiceTest",
+      "dost_name": "Practice Test",
+      "subject": "Biology",
+      "chapter": "Full Subject",
+      "difficulty": "medium",
+      "duration_min": 60,
+      "question_count": 30,
+      "question_ids": [
+        "Q029",
+        "Q030",
+        "Q031",
+        "Q032",
+        "Q033",
+        "Q034",
+        "Q035"
+      ],
+      "reasoning": "Biology is your strength (83.2%). A full practice test will consolidate mastery.",
+      "message": "You're doing great in Biology! Take a full mock to prove your mastery. \ud83d\udcdd"
+    },
+    {
+      "step": 5,
+      "dost_type": "clickingPower",
+      "dost_name": "Clicking Power",
+      "subject": "Biology",
+      "chapter": "Speed Drills",
+      "difficulty": "easy",
+      "duration_min": 20,
+      "question_count": 40,
+      "question_ids": [
+        "Q029",
+        "Q030",
+        "Q031",
+        "Q032",
+        "Q033",
+        "Q035"
+      ],
+      "reasoning": "Your average time per question is 99.1s \u2014 speed training will improve efficiency.",
+      "message": "Let's work on your speed! Quick-fire easy questions \u2014 click fast and build confidence. \u26a1"
+    }
+  ]
+}

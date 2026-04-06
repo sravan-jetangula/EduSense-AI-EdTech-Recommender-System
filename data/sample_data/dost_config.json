@@ -1,0 +1,137 @@
+{
+  "dost_types": {
+    "practiceTest": {
+      "name": "Practice Test",
+      "description": "Full-length or sectional mock tests to simulate exam conditions",
+      "icon": "📝",
+      "parameters": {
+        "default_difficulty": "medium",
+        "duration_minutes": 60,
+        "question_count": 30,
+        "negative_marking": true,
+        "negative_ratio": 0.25,
+        "time_per_question": 2,
+        "subjects": ["Physics", "Chemistry", "Mathematics", "Biology"]
+      },
+      "use_case": "Comprehensive assessment and exam readiness",
+      "priority": 1
+    },
+    "practiceAssignment": {
+      "name": "Practice Assignment",
+      "description": "Targeted topic-wise assignments to reinforce specific concepts",
+      "icon": "📋",
+      "parameters": {
+        "default_difficulty": "medium",
+        "duration_minutes": 30,
+        "question_count": 15,
+        "negative_marking": false,
+        "time_per_question": 2,
+        "subjects": ["Physics", "Chemistry", "Mathematics", "Biology"]
+      },
+      "use_case": "Focused practice on identified weak areas",
+      "priority": 2
+    },
+    "formula": {
+      "name": "Formula Sheet",
+      "description": "Quick review of key formulas and their applications",
+      "icon": "🔢",
+      "parameters": {
+        "default_difficulty": "easy",
+        "duration_minutes": 15,
+        "question_count": 10,
+        "negative_marking": false,
+        "time_per_question": 1.5,
+        "subjects": ["Physics", "Chemistry", "Mathematics"]
+      },
+      "use_case": "Formula memorization and application speed",
+      "priority": 3
+    },
+    "revision": {
+      "name": "Revision Session",
+      "description": "Structured review of previously learned topics with spaced repetition",
+      "icon": "🔄",
+      "parameters": {
+        "default_difficulty": "easy",
+        "duration_minutes": 45,
+        "question_count": 20,
+        "negative_marking": false,
+        "time_per_question": 2.25,
+        "subjects": ["Physics", "Chemistry", "Mathematics", "Biology"]
+      },
+      "use_case": "Consolidating knowledge and preventing forgetting",
+      "priority": 4
+    },
+    "concept": {
+      "name": "Concept Building",
+      "description": "Deep dive into fundamental concepts with explanations and examples",
+      "icon": "💡",
+      "parameters": {
+        "default_difficulty": "easy",
+        "duration_minutes": 45,
+        "question_count": 12,
+        "negative_marking": false,
+        "time_per_question": 3.75,
+        "subjects": ["Physics", "Chemistry", "Mathematics", "Biology"]
+      },
+      "use_case": "Building strong conceptual foundation",
+      "priority": 5
+    },
+    "clickingPower": {
+      "name": "Clicking Power",
+      "description": "Speed-based rapid-fire questions to improve answer selection speed",
+      "icon": "⚡",
+      "parameters": {
+        "default_difficulty": "easy",
+        "duration_minutes": 20,
+        "question_count": 40,
+        "negative_marking": false,
+        "time_per_question": 0.5,
+        "subjects": ["Physics", "Chemistry", "Mathematics", "Biology"]
+      },
+      "use_case": "Improving speed on familiar topics",
+      "priority": 6
+    },
+    "pickingPower": {
+      "name": "Picking Power",
+      "description": "Elimination-based questions to improve logical reasoning and option analysis",
+      "icon": "🎯",
+      "parameters": {
+        "default_difficulty": "medium",
+        "duration_minutes": 25,
+        "question_count": 15,
+        "negative_marking": true,
+        "negative_ratio": 0.33,
+        "time_per_question": 1.67,
+        "subjects": ["Physics", "Chemistry", "Mathematics", "Biology"]
+      },
+      "use_case": "Strategic answering and elimination skills",
+      "priority": 7
+    },
+    "speedRace": {
+      "name": "Speed Race",
+      "description": "Timed challenge to maximize correct answers in minimum time",
+      "icon": "🏎️",
+      "parameters": {
+        "default_difficulty": "hard",
+        "duration_minutes": 30,
+        "question_count": 50,
+        "negative_marking": true,
+        "negative_ratio": 0.25,
+        "time_per_question": 0.6,
+        "subjects": ["Physics", "Chemistry", "Mathematics", "Biology"]
+      },
+      "use_case": "Maximum speed and efficiency under pressure",
+      "priority": 8
+    }
+  },
+  "recommendation_rules": {
+    "score_below_40": ["concept", "formula", "revision"],
+    "score_40_to_60": ["practiceAssignment", "revision", "concept"],
+    "score_60_to_75": ["practiceAssignment", "practiceTest", "pickingPower"],
+    "score_above_75": ["speedRace", "practiceTest", "clickingPower"],
+    "high_skip_rate": ["concept", "formula"],
+    "low_completion_rate": ["revision", "concept"],
+    "slow_speed": ["clickingPower", "speedRace"],
+    "fast_but_low_score": ["pickingPower", "concept"]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "student_id": "S002",
+  "name": "Priya Patel",
+  "profile_summary": {
+    "overall_score": 67.19,
+    "trend": "stable",
+    "completion_rate": 0.714,
+    "skip_rate": 0.132,
+    "speed": "moderate",
+    "weak_count": 2,
+    "strong_count": 3
+  },
+  "steps": [
+    {
+      "step": 1,
+      "dost_type": "concept",
+      "dost_name": "Concept Building",
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "difficulty": "easy",
+      "duration_min": 45,
+      "question_count": 12,
+      "question_ids": [
+        "Q011",
+        "Q012",
+        "Q013",
+        "Q014",
+        "Q015"
+      ],
+      "reasoning": "'Thermodynamics' scored below 50% \u2014 concept building needed before attempting harder problems.",
+      "message": "Hey Priya Patel! Let's strengthen 'Thermodynamics'. Start with fundamentals \u2014 no pressure, take your time. \ud83d\udca1"
+    },
+    {
+      "step": 2,
+      "dost_type": "formula",
+      "dost_name": "Formula Sheet",
+      "subject": "Chemistry",
+      "chapter": "Multiple Chapters",
+      "difficulty": "easy",
+      "duration_min": 15,
+      "question_count": 10,
+      "question_ids": [
+        "Q011",
+        "Q012",
+        "Q013",
+        "Q014"
+      ],
+      "reasoning": "Chemistry average is 48.3%. Formulae revision improves recall and accuracy.",
+      "message": "Quick formula blast for Chemistry! Revise key formulas \u2014 aim for 100% recall. \ud83d\udd22"
+    },
+    {
+      "step": 3,
+      "dost_type": "practiceAssignment",
+      "dost_name": "Practice Assignment",
+      "subject": "Biology",
+      "chapter": "Organic Chemistry",
+      "difficulty": "medium",
+      "duration_min": 30,
+      "question_count": 15,
+      "question_ids": [
+        "Q029",
+        "Q030",
+        "Q031",
+        "Q032",
+        "Q033"
+      ],
+      "reasoning": "'Organic Chemistry' is in the 50\u201370% range \u2014 targeted practice will push it into the strong zone.",
+      "message": "Time to level up 'Organic Chemistry'! Medium difficulty assignment \u2014 push yourself a little. \ud83d\udccb"
+    },
+    {
+      "step": 4,
+      "dost_type": "practiceTest",
+      "dost_name": "Practice Test",
+      "subject": "Biology",
+      "chapter": "Full Subject",
+      "difficulty": "medium",
+      "duration_min": 60,
+      "question_count": 30,
+      "question_ids": [
+        "Q029",
+        "Q030",
+        "Q031",
+        "Q032",
+        "Q033",
+        "Q034",
+        "Q035"
+      ],
+      "reasoning": "Biology is your strength (81.3%). A full practice test will consolidate mastery.",
+      "message": "You're doing great in Biology! Take a full mock to prove your mastery. \ud83d\udcdd"
+    },
+    {
+      "step": 5,
+      "dost_type": "clickingPower",
+      "dost_name": "Clicking Power",
+      "subject": "Biology",
+      "chapter": "Speed Drills",
+      "difficulty": "easy",
+      "duration_min": 20,
+      "question_count": 40,
+      "question_ids": [
+        "Q029",
+        "Q030",
+        "Q031",
+        "Q032",
+        "Q033",
+        "Q035"
+      ],
+      "reasoning": "Your average time per question is 131.8s \u2014 speed training will improve efficiency.",
+      "message": "Let's work on your speed! Quick-fire easy questions \u2014 click fast and build confidence. \u26a1"
+    }
+  ]
+}

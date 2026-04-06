@@ -1,0 +1,52 @@
+[
+  {
+    "student_id": "S004",
+    "name": "Sneha Reddy",
+    "composite_score": 85.13,
+    "avg_score": 78.99,
+    "completion_rate": 1.0,
+    "trend": "stable",
+    "sessions": 5,
+    "rank": 1
+  },
+  {
+    "student_id": "S002",
+    "name": "Priya Patel",
+    "composite_score": 68.15,
+    "avg_score": 67.19,
+    "completion_rate": 0.714,
+    "trend": "stable",
+    "sessions": 7,
+    "rank": 2
+  },
+  {
+    "student_id": "S001",
+    "name": "Arjun Sharma",
+    "composite_score": 64.82,
+    "avg_score": 54.73,
+    "completion_rate": 0.833,
+    "trend": "improving",
+    "sessions": 6,
+    "rank": 3
+  },
+  {
+    "student_id": "S005",
+    "name": "Vikram Singh",
+    "composite_score": 62.51,
+    "avg_score": 55.29,
+    "completion_rate": 0.667,
+    "trend": "stable",
+    "sessions": 6,
+    "rank": 4
+  },
+  {
+    "student_id": "S003",
+    "name": "Rohit Kumar",
+    "composite_score": 52.33,
+    "avg_score": 47.01,
+    "completion_rate": 0.625,
+    "trend": "improving",
+    "sessions": 8,
+    "rank": 5
+  }
+]

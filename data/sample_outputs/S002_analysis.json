@@ -1,0 +1,60 @@
+{
+  "student_id": "S002",
+  "name": "Priya Patel",
+  "overall_score": 67.19,
+  "trend": "stable",
+  "trend_slope": 0.668,
+  "scores_series": [
+    78.0,
+    60.0,
+    68.3,
+    45.0,
+    88.0,
+    40.0,
+    91.0
+  ],
+  "weak_topics": [
+    "Thermodynamics",
+    "Electrochemistry"
+  ],
+  "strong_topics": [
+    "Cell Biology",
+    "Ecology",
+    "Human Physiology"
+  ],
+  "moderate_topics": [
+    "Organic Chemistry",
+    "Genetics"
+  ],
+  "subject_breakdown": {
+    "Biology": {
+      "avg_score": 81.33,
+      "sessions": 4,
+      "min": 68.3,
+      "max": 91.0
+    },
+    "Chemistry": {
+      "avg_score": 48.33,
+      "sessions": 3,
+      "min": 40.0,
+      "max": 60.0
+    }
+  },
+  "chapter_breakdown": {
+    "Cell Biology": 78.0,
+    "Organic Chemistry": 60.0,
+    "Genetics": 68.3,
+    "Thermodynamics": 45.0,
+    "Ecology": 88.0,
+    "Electrochemistry": 40.0,
+    "Human Physiology": 91.0
+  },
+  "time_analysis": {
+    "avg_time_per_question_sec": 131.8,
+    "speed_label": "moderate",
+    "total_study_time_hrs": 6.53
+  },
+  "completion_rate": 0.714,
+  "skip_rate": 0.132,
+  "total_sessions": 7
+}

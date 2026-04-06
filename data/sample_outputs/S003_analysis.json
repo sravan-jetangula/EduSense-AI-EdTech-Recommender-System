@@ -1,0 +1,67 @@
+{
+  "student_id": "S003",
+  "name": "Rohit Kumar",
+  "overall_score": 47.01,
+  "trend": "improving",
+  "trend_slope": 5.777,
+  "scores_series": [
+    22.0,
+    27.27,
+    45.8,
+    38.0,
+    68.0,
+    48.0,
+    75.0,
+    52.0
+  ],
+  "weak_topics": [
+    "Matrices",
+    "Determinants",
+    "Electrostatics",
+    "Calculus",
+    "Magnetism",
+    "Optics"
+  ],
+  "strong_topics": [
+    "Vectors",
+    "3D Geometry"
+  ],
+  "moderate_topics": [
+    "Probability",
+    "Modern Physics"
+  ],
+  "subject_breakdown": {
+    "Mathematics": {
+      "avg_score": 52.7,
+      "sessions": 4,
+      "min": 22.0,
+      "max": 75.0
+    },
+    "Physics": {
+      "avg_score": 41.32,
+      "sessions": 4,
+      "min": 27.27,
+      "max": 52.0
+    }
+  },
+  "chapter_breakdown": {
+    "Matrices": 22.0,
+    "Determinants": 22.0,
+    "Electrostatics": 27.27,
+    "Calculus": 45.8,
+    "Magnetism": 38.0,
+    "Probability": 68.0,
+    "Optics": 48.0,
+    "Vectors": 75.0,
+    "3D Geometry": 75.0,
+    "Modern Physics": 52.0
+  },
+  "time_analysis": {
+    "avg_time_per_question_sec": 188.8,
+    "speed_label": "slow",
+    "total_study_time_hrs": 9.44
+  },
+  "completion_rate": 0.625,
+  "skip_rate": 0.246,
+  "total_sessions": 8
+}

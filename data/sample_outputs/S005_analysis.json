@@ -1,0 +1,57 @@
+{
+  "student_id": "S005",
+  "name": "Vikram Singh",
+  "overall_score": 55.29,
+  "trend": "stable",
+  "trend_slope": 0.912,
+  "scores_series": [
+    55.0,
+    45.16,
+    56.6,
+    58.0,
+    72.0,
+    45.0
+  ],
+  "weak_topics": [
+    "Complex Numbers",
+    "Binomial Theorem"
+  ],
+  "strong_topics": [
+    "Waves"
+  ],
+  "moderate_topics": [
+    "Gravitation",
+    "Thermodynamics",
+    "Permutation Combination"
+  ],
+  "subject_breakdown": {
+    "Physics": {
+      "avg_score": 61.2,
+      "sessions": 3,
+      "min": 55.0,
+      "max": 72.0
+    },
+    "Mathematics": {
+      "avg_score": 49.39,
+      "sessions": 3,
+      "min": 45.0,
+      "max": 58.0
+    }
+  },
+  "chapter_breakdown": {
+    "Gravitation": 55.0,
+    "Complex Numbers": 45.16,
+    "Thermodynamics": 56.6,
+    "Permutation Combination": 58.0,
+    "Waves": 72.0,
+    "Binomial Theorem": 45.0
+  },
+  "time_analysis": {
+    "avg_time_per_question_sec": 161.4,
+    "speed_label": "slow",
+    "total_study_time_hrs": 6.11
+  },
+  "completion_rate": 0.667,
+  "skip_rate": 0.194,
+  "total_sessions": 6
+}

@@ -1,0 +1,67 @@
+{
+  "student_id": "S001",
+  "name": "Arjun Sharma",
+  "overall_score": 54.73,
+  "trend": "improving",
+  "trend_slope": 4.696,
+  "scores_series": [
+    39.0,
+    60.61,
+    40.8,
+    62.0,
+    55.0,
+    71.0
+  ],
+  "weak_topics": [
+    "Kinematics",
+    "Laws of Motion",
+    "Quadratic Equations",
+    "Sequences and Series"
+  ],
+  "strong_topics": [
+    "Trigonometry"
+  ],
+  "moderate_topics": [
+    "Atomic Structure",
+    "Work Energy Power",
+    "Chemical Bonding"
+  ],
+  "subject_breakdown": {
+    "Physics": {
+      "avg_score": 50.5,
+      "sessions": 2,
+      "min": 39.0,
+      "max": 62.0
+    },
+    "Chemistry": {
+      "avg_score": 57.8,
+      "sessions": 2,
+      "min": 55.0,
+      "max": 60.61
+    },
+    "Mathematics": {
+      "avg_score": 55.9,
+      "sessions": 2,
+      "min": 40.8,
+      "max": 71.0
+    }
+  },
+  "chapter_breakdown": {
+    "Kinematics": 39.0,
+    "Laws of Motion": 39.0,
+    "Atomic Structure": 60.61,
+    "Quadratic Equations": 40.8,
+    "Sequences and Series": 40.8,
+    "Work Energy Power": 62.0,
+    "Chemical Bonding": 55.0,
+    "Trigonometry": 71.0
+  },
+  "time_analysis": {
+    "avg_time_per_question_sec": 154.1,
+    "speed_label": "slow",
+    "total_study_time_hrs": 5.81
+  },
+  "completion_rate": 0.833,
+  "skip_rate": 0.147,
+  "total_sessions": 6
+}

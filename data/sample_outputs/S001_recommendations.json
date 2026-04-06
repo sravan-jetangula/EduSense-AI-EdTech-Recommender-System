@@ -1,0 +1,113 @@
+{
+  "student_id": "S001",
+  "name": "Arjun Sharma",
+  "profile_summary": {
+    "overall_score": 54.73,
+    "trend": "improving",
+    "completion_rate": 0.833,
+    "skip_rate": 0.147,
+    "speed": "slow",
+    "weak_count": 4,
+    "strong_count": 1
+  },
+  "steps": [
+    {
+      "step": 1,
+      "dost_type": "concept",
+      "dost_name": "Concept Building",
+      "subject": "Physics",
+      "chapter": "Kinematics",
+      "difficulty": "easy",
+      "duration_min": 45,
+      "question_count": 12,
+      "question_ids": [
+        "Q001",
+        "Q002",
+        "Q003",
+        "Q004",
+        "Q005"
+      ],
+      "reasoning": "'Kinematics' scored below 50% \u2014 concept building needed before attempting harder problems.",
+      "message": "Hey Arjun Sharma! Let's strengthen 'Kinematics'. Start with fundamentals \u2014 no pressure, take your time. \ud83d\udca1"
+    },
+    {
+      "step": 2,
+      "dost_type": "formula",
+      "dost_name": "Formula Sheet",
+      "subject": "Physics",
+      "chapter": "Multiple Chapters",
+      "difficulty": "easy",
+      "duration_min": 15,
+      "question_count": 10,
+      "question_ids": [
+        "Q001",
+        "Q002",
+        "Q003",
+        "Q006"
+      ],
+      "reasoning": "Physics average is 50.5%. Formulae revision improves recall and accuracy.",
+      "message": "Quick formula blast for Physics! Revise key formulas \u2014 aim for 100% recall. \ud83d\udd22"
+    },
+    {
+      "step": 3,
+      "dost_type": "practiceAssignment",
+      "dost_name": "Practice Assignment",
+      "subject": "Mathematics",
+      "chapter": "Atomic Structure",
+      "difficulty": "medium",
+      "duration_min": 30,
+      "question_count": 15,
+      "question_ids": [
+        "Q018",
+        "Q019",
+        "Q020",
+        "Q021",
+        "Q022"
+      ],
+      "reasoning": "'Atomic Structure' is in the 50\u201370% range \u2014 targeted practice will push it into the strong zone.",
+      "message": "Time to level up 'Atomic Structure'! Medium difficulty assignment \u2014 push yourself a little. \ud83d\udccb"
+    },
+    {
+      "step": 4,
+      "dost_type": "practiceTest",
+      "dost_name": "Practice Test",
+      "subject": "Chemistry",
+      "chapter": "Full Subject",
+      "difficulty": "medium",
+      "duration_min": 60,
+      "question_count": 30,
+      "question_ids": [
+        "Q011",
+        "Q012",
+        "Q013",
+        "Q014",
+        "Q015",
+        "Q016",
+        "Q017",
+        "Q039"
+      ],
+      "reasoning": "Chemistry is your strength (57.8%). A full practice test will consolidate mastery.",
+      "message": "You're doing great in Chemistry! Take a full mock to prove your mastery. \ud83d\udcdd"
+    },
+    {
+      "step": 5,
+      "dost_type": "clickingPower",
+      "dost_name": "Clicking Power",
+      "subject": "Chemistry",
+      "chapter": "Speed Drills",
+      "difficulty": "easy",
+      "duration_min": 20,
+      "question_count": 40,
+      "question_ids": [
+        "Q011",
+        "Q012",
+        "Q013",
+        "Q014",
+        "Q015",
+        "Q016"
+      ],
+      "reasoning": "Your average time per question is 154.1s \u2014 speed training will improve efficiency.",
+      "message": "Let's work on your speed! Quick-fire easy questions \u2014 click fast and build confidence. \u26a1"
+    }
+  ]
+}

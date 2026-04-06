@@ -1,0 +1,52 @@
+{
+  "student_id": "S004",
+  "name": "Sneha Reddy",
+  "overall_score": 78.99,
+  "trend": "stable",
+  "trend_slope": 0.467,
+  "scores_series": [
+    85.0,
+    73.33,
+    76.6,
+    72.0,
+    88.0
+  ],
+  "weak_topics": [],
+  "strong_topics": [
+    "Plant Kingdom",
+    "p-Block Elements",
+    "Animal Kingdom",
+    "d-Block Elements",
+    "Reproduction"
+  ],
+  "moderate_topics": [],
+  "subject_breakdown": {
+    "Biology": {
+      "avg_score": 83.2,
+      "sessions": 3,
+      "min": 76.6,
+      "max": 88.0
+    },
+    "Chemistry": {
+      "avg_score": 72.66,
+      "sessions": 2,
+      "min": 72.0,
+      "max": 73.33
+    }
+  },
+  "chapter_breakdown": {
+    "Plant Kingdom": 85.0,
+    "p-Block Elements": 73.33,
+    "Animal Kingdom": 76.6,
+    "d-Block Elements": 72.0,
+    "Reproduction": 88.0
+  },
+  "time_analysis": {
+    "avg_time_per_question_sec": 99.1,
+    "speed_label": "moderate",
+    "total_study_time_hrs": 3.94
+  },
+  "completion_rate": 1.0,
+  "skip_rate": 0.071,
+  "total_sessions": 5
+}
