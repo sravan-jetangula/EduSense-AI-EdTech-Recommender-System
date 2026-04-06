@@ -19,7 +19,7 @@ Improvements over original:
 import streamlit as st
 import requests
 def main():
-API_BASE = "http://localhost:8000"
+    API_BASE = "http://localhost:8000"
 
 # ---------------------------------------------------------------------------
 # Page config
