@@ -9,7 +9,7 @@ import os
 # ✅ GLOBAL API BASE (FIXED)
 API_BASE = os.getenv(
     "API_BASE_URL",
-    "https://edusense-ai-edtech-recommender-system.onrender.com"
+    "https://edusense-ai-edtech-recommender-system-1.onrender.com"
 )
 
 # ---------------------------------------------------------------------------
